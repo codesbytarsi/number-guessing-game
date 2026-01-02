@@ -91,6 +91,11 @@ namespace NumberGuessing
                         {
                             isCorrectGuess = true;
                         }
+
+                        if (attemptsCounter >= 3)
+                        {
+                            Console.WriteLine($"⚠️ Attempts left: {maxAttempts - attemptsCounter}");
+                        }
                     }
                     else
                     {
@@ -122,7 +127,7 @@ namespace NumberGuessing
                     {
                         playAgain = true;
                         break;
-                    } 
+                    }
                     else if (answer == "N")
                     {
                         playAgain = false;
